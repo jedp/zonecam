@@ -1,0 +1,25 @@
+{
+  "name": "Photographer's Zone Meter",
+  "description": "I like pie",
+  "type": "web",
+  "version": "0.0.1",
+  "developer": {
+    "name": "Jed Parsons",
+    "url": "http://jedparsons.com"
+  },
+  "default_locale": "en-US",
+
+  "launch_path": "/",
+  "icons": {
+    "16": "/icons/16.png",
+    "48": "/icons/48.png",
+    "128": "/icons/128.png"
+  },
+
+  "orientation": "landscape-primary",
+  "permissions": {
+    "camera": {
+      "description": "Photography app needs to access the camera"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+/* -*- mode: js2 -*- */
+
+const server = require("../server");
+
+if (!module.parent) {
+  server.listen(process.env.PORT || 3000);
+  console.log("Listening on port %d in %s mode", server.address().port, server.settings.env);
+}
