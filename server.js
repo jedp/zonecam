@@ -5,6 +5,8 @@ const express = require('express'),
       mime = require('express/node_modules/mime'),
       path = require('path');
 
+// webapp mimetype is defined in the current release of node-mime, but
+// it was not yet available for the older version of express we are using.
 mime.define({
   "application/x-web-app-manifest+json": ['webapp']
 });
@@ -14,7 +16,7 @@ var app = module.exports = express.createServer();
 // Configuration
 
 app.configure(function(){
-  app.set('views', path.join(__dirname, '..',  'views'));
+  app.set('views', path.join(__dirname, 'views'));
   app.set('view engine', 'jade');
   app.use(express.bodyParser());
   app.use(express.methodOverride());
@@ -32,6 +34,9 @@ app.configure('production', function(){
 
 // Routes
 
+app.get('/', function(req, res) {
+  return res.render('index');
+});
 
 // run
 
