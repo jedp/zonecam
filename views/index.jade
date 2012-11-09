@@ -1,4 +1,14 @@
 script
-  var manifest_url = "/manifest.json";
+  function installMe() {
+    console.log("Instlal me!");
+    console.log(typeof navigator.mozApps);
+    console.log(typeof navigator.mozApps.install);
+    navigator.mozApps.install("http://#{ ip_address }/manifest.webapp");
+    console.log("installed");
+    return false;
+  }
 
-button(onclick="navigator.mozApps.install(manifest_url); return false;") Install me!
+
+h2 I like pie!
+
+button(onclick="return installMe();") Install me!

@@ -13,6 +13,10 @@ mime.define({
 
 var app = module.exports = express.createServer();
 
+app.locals({
+  ip_address: "0.0.0.0:3000"
+});
+
 // Configuration
 
 app.configure(function(){

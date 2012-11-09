@@ -9,7 +9,7 @@
   },
   "default_locale": "en-US",
 
-  "launch_path": "/",
+  "launch_path": "",
   "icons": {
     "16": "/icons/16.png",
     "48": "/icons/48.png",
